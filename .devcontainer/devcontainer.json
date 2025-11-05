@@ -1,0 +1,63 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+    "name": "Python 3",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "image": "mcr.microsoft.com/devcontainers/python:1-3.13-bullseye",
+
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {
+        "ghcr.io/hspaans/devcontainer-features/pytest:1": {}
+    },
+
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "github.github-vscode-theme",
+                "cs50.extension-uninstaller"
+            ],
+            "settings": {
+                "files.exclude": {
+                    "**/.*": true,
+                    "**/tests": true
+                },
+                "git.pullRebase": true,
+                "python.testing.pytestArgs": [
+                    "--tb=short",
+                    "-qq",
+                    "."
+                ],
+                "python.testing.unittestEnabled": false,
+                "python.testing.pytestEnabled": true,                
+                "python.terminal.executeInFileDir": true,
+
+                "editor.mouseWheelZoom": true,
+                "editor.minimap.enabled": false,
+                "editor.emptySelectionClipboard": false,
+                "workbench.editor.enablePreview": false,
+
+                "extensions.ignoreRecommendations": true,
+                "extension-uninstaller.uninstall": [
+                    "Codeium.codeium",
+                    "Codeium.codeium-enterprise-updater",
+                    "github.copilot",
+                    "github.copilot-chat",
+                    "ms-toolsai.vscode-jupyter-cell-tags",
+                    "tabnine.tabnine-vscode"
+                ],
+                "chat.disableAIFeatures": true
+                
+            }
+        }
+    },
+
+    // Environment variables to set in the container.
+    "containerEnv": {
+        "TZ": "America/New_York"
+    },
+    
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "/bin/bash .devcontainer/post-create.sh"
+
+}
