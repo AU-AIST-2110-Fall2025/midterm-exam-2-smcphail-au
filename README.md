@@ -1,3 +1,5 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/VJnVdQth)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=21497192)
 # Midterm 2 Practical Exam - Roster Helpers
 
 The AIST-2110 instructor is preparing the final grade reviews and needs to perform some grade corrections and generate a snapshot of the standout students. Unfortunately, the LMS dumped every record in a messy list of strings carrying the term, a lowercase student name, and the grade information. 
